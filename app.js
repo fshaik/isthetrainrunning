@@ -270,7 +270,7 @@ function receivedMessage(event) {
     switch (messageText.toLowerCase()) {
       case 'is the l train running':
 
-        status = checkTrainStatus ("L")
+        var status = checkTrainStatus ("L")
         consol.log("The Train is ", status)
         sendTextMessage(senderID, status)
         break;
@@ -885,7 +885,7 @@ function checkTrainStatus (train) {
   if(train) {
     switch (train) {
       case 'L':
-        status = getStatus("http://subwaystats.com/status-L-train");
+        var status = getStatus("http://subwaystats.com/status-L-train");
         return status;
       break;
 

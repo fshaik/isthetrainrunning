@@ -886,7 +886,7 @@ function checkTrainStatus (train) {
   if(train) {
     switch (train) {
       case 'L':
-        getStatus("http://subwaystats.com/status-L-train");
+        return getStatus("http://subwaystats.com/status-L-train");
       break;
 
       default:

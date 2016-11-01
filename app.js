@@ -17,6 +17,8 @@ const
   express = require('express'),
   https = require('https'),  
   request = require('request');
+  scrapeIt = require("scrape-it");
+
 
 var app = express();
 app.set('port', process.env.PORT || 5000);
@@ -262,9 +264,12 @@ function receivedMessage(event) {
     // If we receive a text message, check to see if it matches any special
     // keywords and send back the corresponding example. Otherwise, just echo
     // the text we received.
-    switch (messageText) {
-      case 'image':
-        sendImageMessage(senderID);
+    switch (messageText.toLowerCase()) {
+      case 'is the l train running':
+
+        status = checkTrainStatus ("L")
+
+        sendTextMessage(senderID, status)
         break;
 
       case 'gif':
@@ -857,6 +862,42 @@ function callSendAPI(messageData) {
     }
   });  
 }
+
+//Helper Functions
+
+function getStatus(url) {
+    scrapeIt(url, {
+    title: "title",
+    desc: ".header h2",
+    currentStatus: "#content > div.titleStripe > div > div:nth-child(1) > div.col-xs-12.col-sm-7.col-md-7.col-lg-7 > div > div > h2"
+
+  }, (err, page) => {
+      console.log(err || page);
+      return(page.currentStatus)
+  });
+
+}
+
+function checkTrainStatus (train) {
+
+  if(train) {
+    switch (train) {
+      case 'L':
+        getStatus("http://subwaystats.com/status-L-train");
+      break;
+
+      default:
+        getStatus();
+      break;
+
+    }
+  }
+
+
+
+}
+
+
 
 // Start server
 // Webhooks must be available via SSL with a certificate signed by a valid 

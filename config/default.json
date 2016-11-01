@@ -1,6 +1,6 @@
 {
-    "appSecret": "619f60389c8e8beb336aa0d956fdaf53",
-    "pageAccessToken": "EAAPTVeCCGgsBADYhMUW8WfjKCe8Ch4FYVwwWQFPKZC74HG7XaQEDDklTIrk02nRyuRiw7bYjPj1D3pY5ZClBvHzFnLD7h8U5vrcDJJqN2atKRgryF5sE9YkNbuu1bE4QqW88AgZAcGMwROfsa6AmuX7ZBQqVLSMHQyhSNPQK7AZDZD",
+    "appSecret": "9ed7daa82702e16ef439c0e7856dc434",
+    "pageAccessToken": "EAATAuXnd56QBAG4L6MPgbU97OCIYtcJepmqHgv7pKLir39ZBJNftHgE0y9VtsFpaAZCgrmDvGGH7PtYyNNWGbroJEH66U1NggX9drFq7lnP9sP7iNnL1Rkxf0b8w85RaRPxssVmQiiNzKIngtZC35DVruFC8NwnWOXcuyfaqgZDZD",
     "validationToken": "the_train_is_running",
     "serverURL": "https://isthetrainrunning.herokuapp.com/"
 }

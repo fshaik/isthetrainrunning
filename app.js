@@ -271,7 +271,7 @@ function receivedMessage(event) {
       case 'is the l train running':
 
         var status = checkTrainStatus ("L")
-        consol.log("The Train is ", status)
+        console.log("The Train is ", status)
         sendTextMessage(senderID, status)
         break;
 

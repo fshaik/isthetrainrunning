@@ -17,7 +17,6 @@ const
   express = require('express'),
   https = require('https'),  
   request = require('request');
-  scrapeIt = require("scrape-it");
 
 
 var app = express();
@@ -52,6 +51,10 @@ const PAGE_ACCESS_TOKEN = (process.env.MESSENGER_PAGE_ACCESS_TOKEN) ?
 const SERVER_URL = (process.env.SERVER_URL) ?
   (process.env.SERVER_URL) :
   config.get('serverURL');
+
+
+const scrapeIt = require("scrape-it");
+
 
 if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
   console.error("Missing config values");

@@ -1,5 +1,5 @@
 {
-    "appSecret": "9ed7daa82702e16ef439c0e7856dc434",
+    "appSecret": "619f60389c8e8beb336aa0d956fdaf53",
     "pageAccessToken": "EAATAuXnd56QBAG4L6MPgbU97OCIYtcJepmqHgv7pKLir39ZBJNftHgE0y9VtsFpaAZCgrmDvGGH7PtYyNNWGbroJEH66U1NggX9drFq7lnP9sP7iNnL1Rkxf0b8w85RaRPxssVmQiiNzKIngtZC35DVruFC8NwnWOXcuyfaqgZDZD",
     "validationToken": "the_train_is_running",
     "serverURL": "https://isthetrainrunning.herokuapp.com/"

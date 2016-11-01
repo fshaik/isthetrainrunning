@@ -271,7 +271,7 @@ function receivedMessage(event) {
       case 'is the l train running':
 
         status = checkTrainStatus ("L")
-
+        consol.log("The Train is ", status)
         sendTextMessage(senderID, status)
         break;
 
@@ -875,7 +875,6 @@ function getStatus(url) {
     currentStatus: "#content > div.titleStripe > div > div:nth-child(1) > div.col-xs-12.col-sm-7.col-md-7.col-lg-7 > div > div > h2"
 
   }, (err, page) => {
-      console.log(err || page);
       return(page.currentStatus)
   });
 
@@ -886,7 +885,8 @@ function checkTrainStatus (train) {
   if(train) {
     switch (train) {
       case 'L':
-        return getStatus("http://subwaystats.com/status-L-train");
+        status = getStatus("http://subwaystats.com/status-L-train");
+        return status;
       break;
 
       default:
